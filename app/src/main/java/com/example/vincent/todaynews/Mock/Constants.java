@@ -47,10 +47,8 @@ public class Constants {
 
     public static ArrayList<LeftItemClassify> getLeftCategoryData() {
         ArrayList<LeftItemClassify> leftItemClassifies = new ArrayList<>();
-        int[] iconIds = {R.drawable.ic_drawer_search, R.drawable.ic_drawer_favorite, R.drawable.ic_drawer_message,
-                R.drawable.ic_drawer_offline, R.drawable.left_drawer_activity_selector, R.drawable.ic_drawer_setting
-                , R.drawable.ic_drawer_feedback, R.drawable.ic_drawer_appstore};
-        String[] texts = {"搜索", "收藏", "消息", "离线", "活动", "设置", "反馈", "精彩应用"};
+        int[] iconIds = { R.drawable.sellicon_leftdrawer, R.drawable.feedbackicon_leftdrawer,R.drawable.dynamicicon_leftdrawer, R.drawable.topicicon_leftdrawer, R.drawable.favoriteicon_leftdrawer, R.drawable.activityicon_leftdrawer, R.drawable.sellicon_leftdrawer, R.drawable.feedbackicon_leftdrawer};
+        String[] texts = {"我要爆料", "今日游戏", "好友动态", "我的话题", "收藏", "活动", "商城", "反馈"};
         for (int i = 0; i < iconIds.length; i++) {
             LeftItemClassify leftItemClassify = new LeftItemClassify(iconIds[i], texts[i]);
             leftItemClassifies.add(leftItemClassify);

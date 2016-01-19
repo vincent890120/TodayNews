@@ -2,17 +2,17 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_selected="true">
         <shape>
-            <solid android:color="@color/left_drawer_item_bg_pressed" />
+            <solid android:color="@color/lighter_gray" />
         </shape>
     </item>
     <item android:state_pressed="true">
         <shape>
-            <solid android:color="@color/left_drawer_item_bg_pressed" />
+            <solid android:color="@color/lighter_gray" />
         </shape>
     </item>
     <item>
         <shape>
-            <solid android:color="@color/left_drawer_item_bg_normal" />
+            <solid android:color="@color/white" />
         </shape>
     </item>
 </selector>
