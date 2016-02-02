@@ -44,6 +44,7 @@ public class NewsFragment extends Fragment implements AdapterView.OnItemClickLis
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(getActivity(), DetailsActivity.class);
+        intent.putExtra("news",newsList.get(position));
         startActivity(intent);
         getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }

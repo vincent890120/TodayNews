@@ -3,6 +3,7 @@ package com.example.vincent.todaynews.tools;
 import android.app.Activity;
 import android.content.Context;
 import android.util.DisplayMetrics;
+import android.widget.LinearLayout;
 
 public class BaseTools {
 
@@ -12,6 +13,6 @@ public class BaseTools {
 		return dm.widthPixels;
 	}
 	public final static int getWidthForImage(Context context,int mColumnCount) {
-		return (ViewUtils.getScreenWidthPixels(context) - ViewUtils.dip2px(context, 10 + 6 * mColumnCount)) / mColumnCount;
+		return (ViewUtils.getScreenWidthPixels(context) - ViewUtils.dip2px(context, 40)) / mColumnCount;
 	}
 }

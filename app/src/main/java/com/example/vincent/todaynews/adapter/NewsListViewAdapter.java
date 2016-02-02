@@ -123,7 +123,8 @@ public class NewsListViewAdapter extends BaseAdapter {
                     int itemWidth = BaseTools.getWidthForImage(mContext, count);
                     for (int i = 0; i < count; i++) {
                         ImageView imageView = new ImageView(mContext);
-                        imageView.setLayoutParams(new LinearLayout.LayoutParams(itemWidth, count == 1 ? (int) (itemWidth * 0.6) : (int) (itemWidth * 0.8)));
+                        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(itemWidth, count == 1 ? (int) (itemWidth * 0.6) : (int) (itemWidth * 0.8));
+                        imageView.setLayoutParams(params);
                         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                         imageView.setPadding(8, 8, 8, 8);
                         ImageLoader.getInstance().displayImage(newsEntity.getPicList().get(i), imageView);
