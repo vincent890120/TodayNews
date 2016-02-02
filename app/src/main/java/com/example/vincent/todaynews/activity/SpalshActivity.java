@@ -5,9 +5,8 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 
-import com.example.vincent.todaynews.Base.BaseActivity;
+import com.example.vincent.todaynews.base.BaseActivity;
 import com.example.vincent.todaynews.R;
-import com.example.vincent.todaynews.fragment.ContentFragment;
 
 /**
  * Created by vincent on 15/12/30.

@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.vincent.todaynews.Mock.Constants;
+import com.example.vincent.todaynews.mock.Constants;
 import com.example.vincent.todaynews.R;
 import com.example.vincent.todaynews.bean.LeftItemClassify;
 

@@ -20,7 +20,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.vincent.todaynews.Mock.Constants;
+import com.example.vincent.todaynews.mock.Constants;
 import com.example.vincent.todaynews.R;
 import com.example.vincent.todaynews.adapter.NewsFragmentPagerAdapter;
 import com.example.vincent.todaynews.bean.NewsClassify;
@@ -28,8 +28,6 @@ import com.example.vincent.todaynews.tools.BaseTools;
 import com.example.vincent.todaynews.widget.ColumnHorizontalScrollView;
 
 import java.util.ArrayList;
-
-import dalvik.system.DexClassLoader;
 
 public class ContentFragment extends Fragment implements View.OnClickListener {
 

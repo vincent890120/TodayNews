@@ -1,8 +1,9 @@
-package com.example.vincent.todaynews.Base;
+package com.example.vincent.todaynews.base;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 /**
  * Created by vincent on 15/12/30.
@@ -22,6 +23,10 @@ public abstract class BaseActivity extends Activity{
         startActivity(intent);
     }
     protected void openActivity(Class<?> pClass){
-        openActivity(pClass,null);
+        openActivity(pClass, null);
+    }
+
+    public void doBack(View view) {
+        onBackPressed();
     }
 }

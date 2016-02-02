@@ -1,73 +1,6 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        -->
-    </style>
-
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
 
@@ -417,7 +350,11 @@
 
     <style name="detail_back_view" parent="@style/back_view">
         <item name="android:background">@drawable/transparent</item>
-        <item name="android:drawableLeft">@drawable/btn_back_detail</item>
+        <item name="android:drawableLeft">@drawable/left_back_bg</item>
+    </style>
+    <style name="detail_settings_view" parent="@style/back_view">
+        <item name="android:background">@drawable/transparent</item>
+        <item name="android:drawableLeft">@drawable/detail_settings_bg</item>
     </style>
 
     <style name="deail_title_text_style" parent="@style/title_text_style">
@@ -427,10 +364,9 @@
     <style name="toolbar_action">
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:scaleType">center</item>
-        <item name="android:minWidth">44.0dip</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:scaleType">fitXY</item>
         <item name="android:layout_weight">0.0</item>
     </style>
 
@@ -470,4 +406,14 @@
         <item name="android:textColor">#ffeeeeee</item>
     </style>
 
+    <style name="item_text_title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="item_text_icon">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
 </resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50.0dip"
+    android:background="@color/toolbar_bg"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_bg"
+            android:layout_marginLeft="10dp"
+            android:hint="写评论..."
+            android:padding="5dp"
+            android:textColor="@color/gray"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingLeft="6.0dip"
+        android:paddingRight="6.0dip">
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@+id/action_favor"
+                style="@style/toolbar_action"
+                android:src="@drawable/ic_action_favor" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@+id/action_view_comment"
+                style="@style/toolbar_action"
+                android:src="@drawable/ic_action_comment" />
+
+            <TextView
+                android:id="@+id/action_comment_count"
+                style="@style/toolbar_action_comment" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@+id/action_repost"
+                style="@style/toolbar_action"
+                android:src="@drawable/ic_action_repost" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.0">
+
+            <ImageView
+                android:id="@+id/action_previous"
+                style="@style/toolbar_action"
+                android:src="@drawable/ic_action_previous" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.0">
+
+            <ImageView
+                android:id="@+id/action_next"
+                style="@style/toolbar_action"
+                android:src="@drawable/ic_action_next" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.0">
+
+            <ImageView
+                android:id="@+id/action_more"
+                style="@style/toolbar_action"
+                android:src="@drawable/ic_action_more" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.0">
+
+            <ImageView
+                android:id="@+id/action_share"
+                style="@style/toolbar_action"
+                android:src="@drawable/ic_action_share" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/detail_title_bar_style"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/back"
+        style="@style/detail_back_view"
+        android:onClick="doBack" />
+
+    <TextView
+        android:id="@+id/settings"
+        style="@style/detail_settings_view"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="Tag_BOTTOMVIEW" type="id"></item>
+    <item name="Tag_RIGHTVIEW" type="id"></item>
+</resources>
