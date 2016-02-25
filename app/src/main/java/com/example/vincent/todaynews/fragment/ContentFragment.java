@@ -1,6 +1,7 @@
 package com.example.vincent.todaynews.fragment;
 
 
+import android.content.ClipData;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -24,10 +25,14 @@ import com.example.vincent.todaynews.mock.Constants;
 import com.example.vincent.todaynews.R;
 import com.example.vincent.todaynews.adapter.NewsFragmentPagerAdapter;
 import com.example.vincent.todaynews.bean.NewsClassify;
-import com.example.vincent.todaynews.tools.BaseTools;
+import com.example.vincent.todaynews.model.City;
+import com.example.vincent.todaynews.utils.BaseTools;
 import com.example.vincent.todaynews.widget.ColumnHorizontalScrollView;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import de.greenrobot.event.EventBus;
 
 public class ContentFragment extends Fragment implements View.OnClickListener {
 
@@ -65,6 +70,24 @@ public class ContentFragment extends Fragment implements View.OnClickListener {
             selectTab(position);
         }
     };
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
+
+    public void onEventMainThread(List<NewsClassify> newsClassifyList) {
+        newsClassify.clear();
+        newsClassify.addAll(newsClassifyList);
+        initTabColumn();
+    }
 
     @Nullable
     @Override
@@ -180,6 +203,7 @@ public class ContentFragment extends Fragment implements View.OnClickListener {
         for (int i = 0; i < count; i++) {
             Bundle data = new Bundle();
             data.putString("text", newsClassify.get(i).getTitle());
+            data.putInt("column_type", newsClassify.get(i).getType());
             NewsFragment newfragment = new NewsFragment();
             newfragment.setArguments(data);
             fragments.add(newfragment);

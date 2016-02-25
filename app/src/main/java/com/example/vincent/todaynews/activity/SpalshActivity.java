@@ -24,7 +24,6 @@ public class SpalshActivity extends BaseActivity {
         initView();
     }
 
-    @Override
     protected void findViewById() {
         splashImageView = (ImageView) findViewById(R.id.splash_imageview);
     }

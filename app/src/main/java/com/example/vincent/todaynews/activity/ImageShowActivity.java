@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public class ImageShowActivity extends BaseActivity{
     /** 图片展示 */
-    private ImageShowViewPager image_pager;
+    private ViewPager image_pager;
     private TextView page_number;
     /** 图片下载按钮 */
     private ImageView download;
@@ -40,14 +40,11 @@ public class ImageShowActivity extends BaseActivity{
         imgsUrl = getIntent().getStringArrayListExtra("infos");
         page_number.setText("1" + "/" + imgsUrl.size());
     }
-    @Override
-    protected void findViewById() {
 
-    }
 
     @Override
     protected void initView() {
-        image_pager = (ImageShowViewPager) findViewById(R.id.image_pager);
+        image_pager = (ViewPager) findViewById(R.id.image_pager);
         page_number = (TextView) findViewById(R.id.page_number);
         download = (ImageView) findViewById(R.id.download);
         image_pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {

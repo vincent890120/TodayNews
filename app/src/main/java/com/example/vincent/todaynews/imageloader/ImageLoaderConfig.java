@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 
 import com.example.vincent.todaynews.R;
+import com.example.vincent.todaynews.utils.ImageUtils;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
 import com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
@@ -62,7 +63,7 @@ public class ImageLoaderConfig {
      * @return
      */
     public DisplayImageOptions initDisplayOptions(int targetWidth,
-                                                         boolean isShowDefault) {
+                                                  boolean isShowDefault) {
         DisplayImageOptions.Builder displayImageOptionsBuilder = new DisplayImageOptions.Builder();
         // 设置图片缩放方式
         // EXACTLY: 图像将完全按比例缩小的目标大小

@@ -8,6 +8,13 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
+    <style name="AppTheme_translucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
     <style name="top_category_scroll_view_item_text">
         <item name="android:textSize">16.0sp</item>
         <item name="android:textStyle">bold</item>
@@ -352,6 +359,7 @@
         <item name="android:background">@drawable/transparent</item>
         <item name="android:drawableLeft">@drawable/left_back_bg</item>
     </style>
+
     <style name="detail_settings_view" parent="@style/back_view">
         <item name="android:background">@drawable/transparent</item>
         <item name="android:drawableLeft">@drawable/detail_settings_bg</item>
@@ -415,5 +423,13 @@
     <style name="item_text_icon">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="ImageTranslucentTheme" parent="AppTheme_translucent">
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+    </style>
+
+    <style name="ColorTranslucentTheme" parent="AppTheme_translucent">
+
     </style>
 </resources>

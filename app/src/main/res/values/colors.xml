@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
     <color name="abc_search_url_text_normal">#ff7fa87f</color>
 
     <item name="abc_search_url_text_selected" type="color">@*android:color/black</item>
@@ -698,4 +703,45 @@
     <color name="ss_top_progressbar_start">#10ffffff</color>
     <color name="ss_top_progressbar_end">#ffffffff</color>
 
+
+    <!-- 视觉规范 字体颜色 -->
+    <color name="more_gray">#FFBFB9B0</color>
+    <color name="light_gray">#FF999999</color>
+    <color name="middle_gray">#FF969696</color>
+    <color name="deep_gray">#FF333333</color>
+    <color name="dark_gray">#FFABA9A5</color>
+    <color name="font_gray">#FF878787</color>
+    <color name="background_gray">#FFDCDCDC</color>
+    <color name="light_red">#FFFF6633</color>
+    <color name="orange_red">#FFFF8000</color>
+    <color name="deep_orange_red">#FFE84200</color>
+    <!-- 通用页面背景色 -->
+    <color name="common_bk_color">#FFF0F0F0</color>
+
+    <!--tuan 字体颜色 -->
+    <color name="divider_line_gray">#E6E6E6</color>
+    <color name="text_color_black">#323232</color>
+    <color name="text_color_gray">#878787</color>
+    <color name="text_color_disable">#b2b2b2</color>
+    <color name="text_color_warning">#da4c39</color>
+    <color name="text_color_link">#0078ff</color>
+    <color name="text_color_orange">#ff8400</color>
+    <color name="text_color_orange_mask">#30ff8400</color>
+    <color name="text_color_green">#8fbe00</color>
+    <color name="text_color_white">#ffffffff</color>
+    <color name="text_color_gray_pay">#ffb1b1b1</color>
+    <color name="text_color_blue">#2f93d2</color>
+
+    <color name="deal_dark_black">@color/text_color_black</color>
+    <color name="deal_light_black">@color/text_color_black</color>
+    <color name="deal_light_gray">@color/text_color_gray</color>
+    <color name="pressed_gray">#1e000000</color>
+    <color name="trans_forgound">#b4ffffff</color>
+
+
+    <!-- list view -->
+    <color name="line_gray">#FFd7d7d7</color>
+    <color name="click_gray">#FFD9D9D9</color>
+    <color name="filter_gray">#FFF5F5F5</color>
+    <color name="inner_divider">#E1E1E1</color>
 </resources>

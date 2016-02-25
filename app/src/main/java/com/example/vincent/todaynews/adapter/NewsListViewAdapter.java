@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.vincent.todaynews.R;
 import com.example.vincent.todaynews.bean.NewsEntity;
-import com.example.vincent.todaynews.tools.BaseTools;
+import com.example.vincent.todaynews.utils.BaseTools;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;

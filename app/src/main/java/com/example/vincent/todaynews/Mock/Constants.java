@@ -4,6 +4,7 @@ import com.example.vincent.todaynews.R;
 import com.example.vincent.todaynews.bean.LeftItemClassify;
 import com.example.vincent.todaynews.bean.NewsClassify;
 import com.example.vincent.todaynews.bean.NewsEntity;
+import com.example.vincent.todaynews.model.City;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +28,7 @@ public class Constants {
         classify = new NewsClassify();
         classify.setId(3);
         classify.setTitle("上海");
+        classify.setType(2);
         newsClassify.add(classify);
         classify = new NewsClassify();
         classify.setId(4);
@@ -121,5 +123,35 @@ public class Constants {
         }
         return newsList;
 
+    }
+    public static ArrayList<City> getCityList(){
+        ArrayList<City> cityList =new ArrayList<City>();
+        City city1 = new City(1, "安吉", 'A');
+        City city2 = new City(2, "北京", 'B');
+        City city3 = new City(3, "长春", 'C');
+        City city4 = new City(4, "长沙", 'C');
+        City city5 = new City(5, "大连", 'D');
+        City city6 = new City(6, "哈尔滨", 'H');
+        City city7 = new City(7, "杭州", 'H');
+        City city8 = new City(8, "金沙江", 'J');
+        City city9 = new City(9, "江门", 'J');
+        City city10 = new City(10, "山东", 'S');
+        City city11 = new City(11, "三亚", 'S');
+        City city12 = new City(12, "义乌", 'Y');
+        City city13 = new City(13, "舟山", 'Z');
+        cityList.add(city1);
+        cityList.add(city2);
+        cityList.add(city3);
+        cityList.add(city4);
+        cityList.add(city5);
+        cityList.add(city6);
+        cityList.add(city7);
+        cityList.add(city8);
+        cityList.add(city9);
+        cityList.add(city10);
+        cityList.add(city11);
+        cityList.add(city12);
+        cityList.add(city13);
+        return cityList;
     }
 }

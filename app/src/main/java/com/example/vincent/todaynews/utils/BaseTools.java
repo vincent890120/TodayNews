@@ -1,9 +1,8 @@
-package com.example.vincent.todaynews.tools;
+package com.example.vincent.todaynews.utils;
 
 import android.app.Activity;
 import android.content.Context;
 import android.util.DisplayMetrics;
-import android.widget.LinearLayout;
 
 public class BaseTools {
 

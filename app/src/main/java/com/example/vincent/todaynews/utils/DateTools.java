@@ -1,4 +1,4 @@
-package com.example.vincent.todaynews.tools;
+package com.example.vincent.todaynews.utils;
 
 import android.text.TextUtils;
 

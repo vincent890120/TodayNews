@@ -7,21 +7,19 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.vincent.todaynews.R;
 import com.example.vincent.todaynews.base.BaseActivity;
 import com.example.vincent.todaynews.bean.NewsEntity;
-import com.example.vincent.todaynews.tools.DateTools;
-import com.example.vincent.todaynews.tools.NewsDetailsService;
+import com.example.vincent.todaynews.utils.DateTools;
+import com.example.vincent.todaynews.utils.NewsDetailsService;
 
 import java.util.ArrayList;
 
@@ -38,7 +36,6 @@ public class DetailsActivity extends BaseActivity {
     private String news_source;
     private String news_date;
     private TextView title;
-    private FrameLayout customview_layout;
     private TextView action_comment_count;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,15 +46,12 @@ public class DetailsActivity extends BaseActivity {
         initView();
     }
 
-    @Override
     protected void findViewById() {
         webView = (WebView)findViewById(R.id.wb_details);
         title = (TextView) findViewById(R.id.title);
         progressBar = (ProgressBar) findViewById(R.id.ss_htmlprogessbar);
-        customview_layout = (FrameLayout) findViewById(R.id.customview_layout);
         //底部栏目
         action_comment_count = (TextView) findViewById(R.id.action_comment_count);
-
         progressBar.setVisibility(View.VISIBLE);
         title.setTextSize(13);
         title.setVisibility(View.VISIBLE);
@@ -78,7 +72,6 @@ public class DetailsActivity extends BaseActivity {
     }
 
     private void initWebView(){
-       LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
         if (!TextUtils.isEmpty(news_url)) {
             WebSettings settings = webView.getSettings();
             settings.setJavaScriptEnabled(true);//设置可以运行JS脚本
@@ -87,7 +80,7 @@ public class DetailsActivity extends BaseActivity {
             settings.setBuiltInZoomControls(false);
             webView.setBackgroundResource(R.color.transparent);
             // 添加js交互接口类，并起别名 imagelistner
-            webView.addJavascriptInterface(new JavascriptImageInterface(getApplicationContext()),"imagelistner");
+            webView.addJavascriptInterface(new JavascriptImageInterface(getApplicationContext()), "imagelistner");
             webView.setWebChromeClient(new MyWebChromeClient());
             webView.setWebViewClient(new MyWebViewClient());
             new MyAsnycTask().execute(news_url, news_title, news_source + " " + news_date);

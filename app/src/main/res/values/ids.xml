@@ -2,4 +2,9 @@
 <resources>
     <item name="Tag_BOTTOMVIEW" type="id"></item>
     <item name="Tag_RIGHTVIEW" type="id"></item>
+
+    <!-- pull to refresh -->
+    <item name="gridview" type="id" />
+    <item name="webview" type="id" />
+    <item name="scrollview" type="id" />
 </resources>

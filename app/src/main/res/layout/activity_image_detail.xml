@@ -3,9 +3,10 @@
     android:id="@+id/full_image_root"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/bg_full_image" >
+    android:background="@drawable/bg_full_image"
+    android:fitsSystemWindows="true">
 
-    <com.example.vincent.todaynews.ImageShowViewPager
+    <android.support.v4.view.ViewPager
         android:id="@+id/image_pager"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />

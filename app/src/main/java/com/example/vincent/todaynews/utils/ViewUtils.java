@@ -1,11 +1,10 @@
-package com.example.vincent.todaynews.tools;
+package com.example.vincent.todaynews.utils;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Paint;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.WindowManager;

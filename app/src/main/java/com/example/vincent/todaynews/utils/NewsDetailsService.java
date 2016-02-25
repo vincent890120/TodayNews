@@ -1,4 +1,4 @@
-package com.example.vincent.todaynews.tools;
+package com.example.vincent.todaynews.utils;
 
 /**
  * Created by vincent on 16/2/2.

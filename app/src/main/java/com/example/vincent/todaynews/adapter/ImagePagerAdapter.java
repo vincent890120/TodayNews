@@ -18,20 +18,17 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
-
-
 import java.util.ArrayList;
-/**
- * ͼƬ�����PagerAdapter
- */
+
+import uk.co.senab.photoview.PhotoView;
+
 public class ImagePagerAdapter extends PagerAdapter {
 	Context context;
 	ArrayList<String> imgsUrl;
 	LayoutInflater inflater = null;
 	protected ImageLoader imageLoader = ImageLoader.getInstance();
 	DisplayImageOptions options;
-	//view�ڿؼ�
-	TouchImageView full_image;
+	PhotoView full_image;
 	TextView progress_text;
 	ProgressBar progress;
 	TextView retry;
@@ -43,11 +40,10 @@ public class ImagePagerAdapter extends PagerAdapter {
 		options = Options.getListOptions();
 	}
 	
-	/** ��̬������� */
 	@Override
 	public void setPrimaryItem(ViewGroup container, int position, Object object) {
 		super.setPrimaryItem(container, position, object);
-		((ImageShowViewPager) container).mCurrentView = ((TouchImageView) ((View)object).findViewById(R.id.full_image));
+//		((ImageShowViewPager) container).mCurrentView = ((PhotoView) ((View)object).findViewById(R.id.full_image));
 	}
 	
 	@Override
@@ -69,10 +65,10 @@ public class ImagePagerAdapter extends PagerAdapter {
 	@Override
 	public Object instantiateItem(ViewGroup container, int position) {
 		View view = inflater.from(context).inflate(R.layout.details_imageshow_item, null);
-		full_image = (TouchImageView)view.findViewById(R.id.full_image);
+		full_image = (PhotoView)view.findViewById(R.id.full_image);
 		progress_text= (TextView)view.findViewById(R.id.progress_text);
 		progress= (ProgressBar)view.findViewById(R.id.progress);
-		retry= (TextView)view.findViewById(R.id.retry);//����ʧ��
+		retry= (TextView)view.findViewById(R.id.retry);
 		progress_text.setText(String.valueOf(position));
 		imageLoader.displayImage(imgsUrl.get(position), full_image, options,new ImageLoadingListener() {
 			
